@@ -1,3 +1,32 @@
+<?php
+$competitions = [
+  [
+    'title' => 'Business Plan',
+    'img' => 'mascot_business_plan.png',
+    'desc' => 'Develop a suitable business for Gen-Z by utilizing technological advances in the digital era.'
+  ],
+  [
+    'title' => 'Essay Contest',
+    'img' => 'mascot_essay.png',
+    'desc' => 'Dampak era digital terhadap perkembangan bisnis.'
+  ],
+  [
+    'title' => 'Design Poster',
+    'img' => 'mascot-poster.png',
+    'desc' => 'The impact of digital era suitable bussines in digital era.'
+  ],
+  [
+    'title' => 'Photography',
+    'img' => 'mascot_foto.png',
+    'desc' => 'The challenge of facing epidemic era.'
+  ],
+  [
+    'title' => 'Video Competition',
+    'img' => 'mascot_video.png',
+    'desc' => 'How to adjust to the new normal era.'
+  ],
+];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include("./partials/head.php");?>
@@ -12,7 +41,7 @@
                     <h1>creanomic</h1>
                     <h2>2022</h2>
                     <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-                    <a href="#">Lets start</a>
+                    <a href="#about">Lets start</a>
                 </div>
             </div>
         </div>
@@ -35,8 +64,27 @@
             </div>
         </div>
     </section>
+    <section id="competition" class="pt-5">
+        <div class="container">
+            <h1 class="text-center"><b>Competition</b></h1>
+            <div class="slider">
+                        <div class="owl-carousel">
+                            <?php foreach ($competitions as $c) { ?>
+                            <div class="slider-card">
+                                <div class="d-flex justify-content-center align-items-center mb-4 img-slider">
+                                    <img src="./assets/img/<?= $c['img']; ?>" alt="" >
+                                </div>
+                                <div class="border"></div>
+                                <h5 class="mb-0 text-center"><b><?= $c['title']; ?></b></h5>
+                                <p class="text-center p-4"><?= $c['desc']; ?></p>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+        </div>
+    </section>
 
+    <?php include("./partials/script.php");?>
     <?php include("./partials/footer.php");?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

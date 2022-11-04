@@ -25,7 +25,9 @@ nav .navbar-brand h1{
     font-weight: 700;
     font-size: 32px;
     line-height: 48px;
-    color: red;
+    background: linear-gradient(90deg, #FF8F40 0%, #FB4876 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 .navbar-nav .nav-item{
     margin-left:30px;
